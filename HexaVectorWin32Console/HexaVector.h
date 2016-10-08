@@ -8,11 +8,19 @@ class HexaVector
 {
 private:
 
-    BCDHexaDecimal * bH;
+    vector<IHexaDecimal> * myVector;
 
 public:
 
+    void SetVector(vector<IHexaDecimal> * arg);
+
+    vector<IHexaDecimal> * GetVector();
+
+    void AddVector(IHexaDecimal * arg);
+
     HexaVector();
+
+    void Dispose();
 
     ~HexaVector();
 };

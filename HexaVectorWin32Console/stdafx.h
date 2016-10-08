@@ -12,8 +12,15 @@
 
 // TODO: プログラムに必要な追加ヘッダーをここで参照してください
 
+#include <iostream>
+#include <string>
+#include <vector>
+
 #include "lib\BCDHexaDecimal.h"
 #include "lib\DateBCDHexaDecimal.h"
 #include "lib\HexaByte.h"
+#include "lib\IHexaDecimal.h"
 #include "lib\IntHexaDecimal.h"
 #include "lib\RawStrHexaDecimal.h"
+
+using namespace std;

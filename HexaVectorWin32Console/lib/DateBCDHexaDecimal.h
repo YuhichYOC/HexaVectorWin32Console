@@ -8,11 +8,11 @@
 
 #include "stdafx.h"
 
-#include "HexaByte.h"
+#include "IHexaDecimal.h"
 
 namespace HexaDecimalWin32
 {
-    class DateBCDHexaDecimal
+    class DateBCDHexaDecimal : public IHexaDecimal
     {
     private:
 

@@ -52,6 +52,10 @@ namespace HexaDecimalWin32
 
         std::string * GetBCDStr();
 
+        int GetNumericValue();
+
+        std::string GetRawValue();
+
         void HexaToValue();
 
         void ValueToHexa();

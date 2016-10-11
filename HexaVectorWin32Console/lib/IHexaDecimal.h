@@ -24,6 +24,10 @@ namespace HexaDecimalWin32
 
         virtual int GetSize() = 0;
 
+        virtual int GetNumericValue() = 0;
+
+        virtual std::string GetRawValue() = 0;
+
         virtual void HexaToValue() = 0;
 
         virtual void ValueToHexa() = 0;

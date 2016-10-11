@@ -42,6 +42,10 @@ namespace HexaDecimalWin32
 
         int GetValue();
 
+        int GetNumericValue();
+
+        std::string GetRawValue();
+
         void HexaToValue();
 
         void ValueToHexa();

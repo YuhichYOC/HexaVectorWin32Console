@@ -1,4 +1,5 @@
 #include "stdafx.h"
+
 #include "SortIndexer.h"
 
 void SortIndexer::SetIndex(int arg)

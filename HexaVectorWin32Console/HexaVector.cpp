@@ -1,10 +1,15 @@
 #include "stdafx.h"
+
 #include "HexaVector.h"
 
 void HexaVector::DisposeVector()
 {
     int iLoopCount = (int)myVector->size();
     for (int i = 0; i < iLoopCount; i++) {
+        int jLoopCount = (int)myVector->at(i)->size();
+        for (int j = 0; j < jLoopCount; j++) {
+            delete myVector->at(i)->at(j);
+        }
         delete myVector->at(i);
     }
     delete myVector;
@@ -19,17 +24,17 @@ void HexaVector::DisposeIndex()
     delete index;
 }
 
-void HexaVector::SetVector(vector<IHexaDecimal *> * arg)
+void HexaVector::SetVector(vector<vector<IHexaDecimal *> *> * arg)
 {
     myVector = arg;
 }
 
-vector<IHexaDecimal *> * HexaVector::GetVector()
+vector<vector<IHexaDecimal *> *> * HexaVector::GetVector()
 {
     return myVector;
 }
 
-void HexaVector::AddVector(IHexaDecimal * arg)
+void HexaVector::AddVector(vector<IHexaDecimal *> * arg)
 {
     myVector->push_back(arg);
 }
@@ -49,12 +54,12 @@ void HexaVector::AddIndex(SortIndexer * arg)
     index->push_back(arg);
 }
 
-bool HexaVector::SortLess(HexaVector * leftSide, HexaVector * rightSide)
+bool HexaVector::SortLess(vector<IHexaDecimal *> * leftSide, vector<IHexaDecimal *> * rightSide)
 {
     int iLoopCount = (int)index->size();
     for (int i = 0; i < iLoopCount; i++) {
-        IHexaDecimal * l = leftSide->GetVector()->at(index->at(i)->GetIndex());
-        IHexaDecimal * r = rightSide->GetVector()->at(index->at(i)->GetIndex());
+        IHexaDecimal * l = leftSide->at(index->at(i)->GetIndex());
+        IHexaDecimal * r = rightSide->at(index->at(i)->GetIndex());
 
         if (index->at(i)->GetAscendingOrder()) {
             switch (l->GetType()) {
@@ -107,7 +112,7 @@ bool HexaVector::SortLess(HexaVector * leftSide, HexaVector * rightSide)
 
 HexaVector::HexaVector()
 {
-    myVector = new vector<IHexaDecimal *>();
+    myVector = new vector<vector<IHexaDecimal *> *>();
     index = new vector<SortIndexer *>();
     disposed = false;
 }

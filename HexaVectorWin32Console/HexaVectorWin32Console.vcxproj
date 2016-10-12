@@ -71,7 +71,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>E:\Users\b50061tem.NES00\Desktop\Desktop\作成物\Proj.1609\HexaVectorWin32Console\HexaVectorWin32Console\lib\Debug;$(IncludePath)</IncludePath>
+    <IncludePath>D:\home\y\Documents\Visual Studio 2015\Projects\HexaVectorWin32Console\HexaVectorWin32Console\lib;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -93,7 +93,6 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>HexaDecimalWin32Library.dll;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -148,14 +147,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HexaVector.h" />
-    <ClInclude Include="HexaVectorTest.h" />
     <ClInclude Include="SortIndexer.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HexaVector.cpp" />
-    <ClCompile Include="HexaVectorTest.cpp" />
     <ClCompile Include="HexaVectorWin32Console.cpp" />
     <ClCompile Include="SortIndexer.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -164,6 +161,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib\HexaDecimalWin32Library.dll" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

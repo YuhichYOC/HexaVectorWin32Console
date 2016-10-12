@@ -60,7 +60,6 @@ bool HexaVector::SortLess(vector<IHexaDecimal *> * leftSide, vector<IHexaDecimal
     for (int i = 0; i < iLoopCount; i++) {
         IHexaDecimal * l = leftSide->at(index->at(i)->GetIndex());
         IHexaDecimal * r = rightSide->at(index->at(i)->GetIndex());
-
         if (index->at(i)->GetAscendingOrder()) {
             switch (l->GetType()) {
             case ValueType::BCD:
@@ -106,7 +105,6 @@ bool HexaVector::SortLess(vector<IHexaDecimal *> * leftSide, vector<IHexaDecimal
             }
         }
     }
-
     return false;
 }
 

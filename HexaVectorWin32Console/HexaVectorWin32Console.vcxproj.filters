@@ -30,9 +30,6 @@
     <ClInclude Include="SortIndexer.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="HexaVectorTest.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -47,8 +44,8 @@
     <ClCompile Include="SortIndexer.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="HexaVectorTest.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib\HexaDecimalWin32Library.dll" />
   </ItemGroup>
 </Project>

@@ -10,7 +10,7 @@ class HexaVector
 {
 private:
 
-    vector<vector<IHexaDecimal *> *> * myVector;
+    vector<IHexaDecimal *> * myVector;
 
     vector<SortIndexer *> * index;
 
@@ -22,11 +22,11 @@ private:
 
 public:
 
-    void SetVector(vector<vector<IHexaDecimal *> *> * arg);
+    void SetVector(vector<IHexaDecimal *> * arg);
 
-    vector<vector<IHexaDecimal *> *> * GetVector();
+    vector<IHexaDecimal *> * GetVector();
 
-    void AddVector(vector<IHexaDecimal *> * arg);
+    void AddVector(IHexaDecimal * arg);
 
     void SetIndex(vector<SortIndexer *> * arg);
 
@@ -34,7 +34,7 @@ public:
 
     void AddIndex(SortIndexer * arg);
 
-    bool SortLess(vector<IHexaDecimal *> * leftSide, vector<IHexaDecimal *> * rightSide);
+    bool SortLess(HexaVector * leftSide, HexaVector * rightSide);
 
     HexaVector();
 

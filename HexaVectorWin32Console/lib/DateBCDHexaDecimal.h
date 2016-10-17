@@ -16,8 +16,6 @@ namespace HexaDecimalWin32
     {
     private:
 
-        ValueType myType;
-
         int mySize;
 
         std::vector<HexaByte> * hexaValue;
@@ -36,8 +34,6 @@ namespace HexaDecimalWin32
 
     public:
 
-        void SetType(ValueType arg);
-
         ValueType GetType();
 
         void SetSize(int arg);
@@ -51,6 +47,10 @@ namespace HexaDecimalWin32
         void SetValue(int arg1yyyy, int arg2mm, int arg3dd);
 
         std::string * GetBCDStr();
+
+        int GetNumericValue();
+
+        std::string GetRawValue();
 
         void HexaToValue();
 

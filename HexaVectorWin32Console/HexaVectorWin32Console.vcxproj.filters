@@ -27,6 +27,12 @@
     <ClInclude Include="HexaVector.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="SortIndexer.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="VectorCompare.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -36,6 +42,12 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="HexaVector.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="SortIndexer.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="VectorCompare.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>

@@ -54,6 +54,13 @@ void HexaVector::AddIndex(SortIndexer * arg)
     index->push_back(arg);
 }
 
+void HexaVector::Sort()
+{
+    VectorCompare vComp;
+    vComp.SetIndexer(index);
+    sort(myVector->begin(), myVector->end(), vComp);
+}
+
 HexaVector::HexaVector()
 {
     myVector = new vector<vector<IHexaDecimal *> *>();

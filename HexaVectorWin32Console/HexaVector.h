@@ -2,9 +2,10 @@
 
 #include "stdafx.h"
 
-#include "SortIndexer.h"
+#include <algorithm>
 
-using namespace HexaDecimalWin32;
+#include "SortIndexer.h"
+#include "VectorCompare.h"
 
 class HexaVector
 {
@@ -33,6 +34,8 @@ public:
     vector<SortIndexer *> * GetIndex();
 
     void AddIndex(SortIndexer * arg);
+
+    void Sort();
 
     HexaVector();
 
